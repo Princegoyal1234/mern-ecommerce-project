@@ -52,7 +52,7 @@ function ProductImageUpload({
     data.append("my_file", imageFile);
     console.log("data is", data);
     const response = await axios.post(
-      `http://${import.meta.env.VITE_API_URL}/api/admin/products/upload-image`,
+      `${import.meta.env.VITE_API_URL}/api/admin/products/upload-image`,
       data
     );
     console.log(response, "response");
