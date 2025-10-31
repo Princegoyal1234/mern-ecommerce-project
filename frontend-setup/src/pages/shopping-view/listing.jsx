@@ -1,14 +1,14 @@
-import ProductFilter from "@/components/shopping-view/filter";
-import ProductDetailsDialog from "@/components/shopping-view/product-details";
-import ShoppingProductTile from "@/components/shopping-view/product-tile";
-import { Button } from "@/components/ui/button";
+import ProductFilter from "@/Components/shopping-view/filter";
+import ProductDetailsDialog from "@/Components/shopping-view/product-details";
+import ShoppingProductTile from "@/Components/shopping-view/product-tile";
+import { Button } from "@/Components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/Components/ui/dropdown-menu";
 import { useToast } from "../../Components/hooks/use-toast";
 import { sortOptions } from "@/config";
 // import { fetchAllFilteredProducts } from "@/store/shop/product-slice";

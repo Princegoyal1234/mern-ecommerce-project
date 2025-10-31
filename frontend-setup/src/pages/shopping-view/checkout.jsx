@@ -1,8 +1,8 @@
-import Address from "@/components/shopping-view/address";
+import Address from "@/Components/shopping-view/address";
 import img from "../../assets/account.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import UserCartItemsContent from "@/components/shopping-view/cart-items-content";
-import { Button } from "@/components/ui/button";
+import UserCartItemsContent from "@/Components/shopping-view/cart-items-content";
+import { Button } from "@/Components/ui/button";
 import { useState } from "react";
 import { createNewOrder } from "@/store/shop/order-slice";
 import { Navigate } from "react-router-dom";

@@ -1,5 +1,5 @@
 import React from 'react'
-import CommonForm from "../../components/auth/form";
+import CommonForm from "../../Components/auth/form";
 import { useState } from "react";
 import { registerFormControls } from "@/config";
 import { Link, useNavigate } from "react-router-dom";
