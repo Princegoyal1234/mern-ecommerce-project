@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { json, Route, Routes } from 'react-router-dom'
 import AuthLayout from './Components/auth/layout'
 import AuthLogin from './pages/auth/Login'
 import AuthRegister from './pages/auth/Register'
@@ -26,7 +26,9 @@ const App = () => {
   const { user, isAuthenticated, isLoading } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(checkAuth()).then((data) => { console.log(data) });
+    const token = JSON.parse(sessionStorage.getItem('token'));
+    console.log(token);
+    dispatch(checkAuth(token)).then((data) => { console.log(data) });
   }, [dispatch])
 
   if (isLoading) return <Skeleton className="w-[800] bg-black h-[600]" />

@@ -19,7 +19,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "../ui/avatar";
-import { logoutUser } from "@/store/auth-slice";
+import { logoutUser, resetTokenAndCredential } from "@/store/auth-slice";
 import UserCartWrapper from "./cart-wrapper";
 import { useEffect, useState } from "react";
 import { fetchCartItems } from "@/store/shop/cart-slice";
@@ -73,7 +73,9 @@ function HeaderRightContent() {
   const dispatch = useDispatch();
   console.log(user);
   function handleLogout() {
-    dispatch(logoutUser());
+    dispatch(resetTokenAndCredential());
+    sessionStorage.removeItem('token');
+    navigate('/auth/login');
   }
 
   useEffect(() => {
